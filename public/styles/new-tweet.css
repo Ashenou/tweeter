@@ -1,7 +1,7 @@
 .new-tweet{
     display:flex;
     justify-content: space-between;
-    width: 95%;
+    width: 93%;
     padding-bottom: 1em;
     padding-left: 3em;
     flex-direction: column;
@@ -30,5 +30,5 @@ output{
 }
 .counter{
     float: right;
-    font-weight: 600;
+    font-weight: 600px;
 }
