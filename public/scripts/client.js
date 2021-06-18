@@ -55,11 +55,13 @@ const onSubmit = function (event) {
   const $newtweet = $(this).serialize();
   const $newtweetCheck = $newtweet.slice(5);
 
-  
   if ($newtweet === null || $newtweetCheck === "") {
-    alert("Your tweet can't be empty");
+    //alert("Your tweet can't be empty");
+    $(".error-emptytweet").slideDown("slow");
+    $(".error-maxtweet").hide();
   } else if ($newtweetCheck.length > 140) {
-    alert("Your tweet can't be more that 140 chars");
+    $(".error-maxtweet").slideDown("slow");
+    $(".error-emptytweet").hide();
   } else {
     $.ajax({
       method: "POST",
@@ -68,5 +70,7 @@ const onSubmit = function (event) {
     })
       .then(loadTweets())
       .catch((err) => console.log(err));
+    $(".error-emptytweet").hide();
+    $(".error-maxtweet").hide();
   }
 };

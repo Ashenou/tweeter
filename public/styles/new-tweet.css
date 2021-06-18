@@ -35,9 +35,13 @@ output{
     font-weight: 600;
     margin-top: -0.03em;
 }
-.error{
-    margin-left: 1em;
+.error-container{
+    display: flex;
+    justify-content: center;
+}
+.error-emptytweet,.error-maxtweet{
     color: red;
     font-weight: 600;
-    
+    display: none;
+    float:left
 }
