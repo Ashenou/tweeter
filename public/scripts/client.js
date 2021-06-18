@@ -10,10 +10,12 @@ $(document).ready(function () {
   loadTweets();
 });
 
+// Handle render tweets request
 const loadTweets = () => {
   $.ajax("/tweets", { method: "GET" }).then((result) => renderTweets(result));
 };
 
+// Render each existing tweet inside the tweet-container
 const renderTweets = function (tweets) {
   const container = $(".tweet-container");
   container.html("");
@@ -23,7 +25,7 @@ const renderTweets = function (tweets) {
   }
 };
 
-// Create a new element for a tweet
+// Create a new element for each tweet
 const createTweetElement = function (tweet) {
   let $tweet = `<article>
     <div class="tweet">
@@ -48,7 +50,7 @@ const createTweetElement = function (tweet) {
   </article>`;
   return $tweet;
 };
-
+// Handle posting a new tweet request and validation
 const onSubmit = function (event) {
   event.preventDefault();
 

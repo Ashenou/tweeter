@@ -40,7 +40,7 @@ main{
   flex-direction: column;
   }
   .page-contents{
-    width: 90vw;
+    width: 103vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,10 +54,6 @@ main{
   }
   .tweet-container {
     width: 72vw;
+  }
 }
-} 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
  
