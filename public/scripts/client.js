@@ -10,6 +10,12 @@ $(document).ready(function () {
   loadTweets();
 });
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 // Handle render tweets request
 const loadTweets = () => {
   $.ajax("/tweets", { method: "GET" }).then((result) => renderTweets(result));
@@ -73,5 +79,6 @@ const onSubmit = function (event) {
       .catch((err) => console.log(err));
     $(".error-emptytweet").hide();
     $(".error-maxtweet").hide();
+    $("textarea").val("");
   }
 };
