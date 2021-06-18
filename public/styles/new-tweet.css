@@ -13,6 +13,9 @@ textarea{
     width: 100%;
     border:none;
 }
+textarea#tweet-text:focus {
+    outline: 0;
+}
 .new-tweet hr{
     border: 1px solid black;
     width: 99%;
@@ -23,12 +26,18 @@ button{
     color:#ffff;
     background-color: rgb(0, 0, 181);
     width: 6.5rem;
-    margin-top: 0.3em;
 }
 output{
     font-family: 'Bungee';
 }
 .counter{
     float: right;
-    font-weight: 600px;
+    font-weight: 600;
+    margin-top: -0.03em;
+}
+.error{
+    margin-left: 1em;
+    color: red;
+    font-weight: 600;
+    
 }

@@ -27,6 +27,7 @@ article .tweet header{
 
 .tweet p {
   font-weight: bold;
+  word-wrap:break-word;
 }
 
 .tweet hr{
