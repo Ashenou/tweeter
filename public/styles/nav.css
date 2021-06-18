@@ -3,7 +3,7 @@ nav{
     justify-content: space-between;
     align-items: flex-end;
     height: 120px;
-    width: 100%;
+    width: 100vw;
     background-color:#4056A1 ;
     color:#FFFFFF;
     padding:.5em 2em;
@@ -32,3 +32,10 @@ nav span{
 #title{
     font-size: xx-large;
 }
+
+@media screen and (max-width:1024px) {
+    nav{
+        background-color: #b37d3b;
+        
+    }
+  } 

@@ -56,7 +56,6 @@ const onSubmit = function (event) {
   const $newtweetCheck = $newtweet.slice(5);
 
   if ($newtweet === null || $newtweetCheck === "") {
-    //alert("Your tweet can't be empty");
     $(".error-emptytweet").slideDown("slow");
     $(".error-maxtweet").hide();
   } else if ($newtweetCheck.length > 140) {

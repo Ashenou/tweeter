@@ -31,9 +31,31 @@ main{
   /* border: dashed black; */
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100vw;
   justify-content: center;
 }
+@media only screen and (min-width:1024px) {
+  body{
+  display:flex;
+  flex-direction: column;
+  }
+  .page-contents{
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10vh;
+  }
+  main {
+  width: 90vw;
+    }
+  .container{
+    flex-grow: 2;
+  }
+  .tweet-container {
+    width: 72vw;
+}
+} 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
